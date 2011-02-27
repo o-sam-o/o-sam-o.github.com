@@ -30,7 +30,6 @@ h2 {
 }
 
 #root {
-  display: table;  
   
   padding-left: 50px;
   padding-right: 50px;
@@ -40,12 +39,12 @@ header, footer, aside, nav, article {
 	display: block;
 }
 
-#page-header {
-  display:table-row; 
+#body-section {
+  display: table;  
 }
 
 #copy {
-   display: table-cell;
+   display:table-row; 
    font-size: 26px;
    font-style: normal;
    font-weight: 400;
@@ -61,29 +60,26 @@ header, footer, aside, nav, article {
   padding-bottom: 15px;
 }
 
-#github-badge {
-  width: 300px;
-}
-
-#article {
-  min-width: 400px;
+#articles {
+  display: table-cell;
 }
 
 #article ul li:before {
 	content: "\00BB \0020";
 }
 
-#body {
-  display: table-cell;
-}
-
 aside {
   display: table-cell;
   width: 320px;
+  padding-left: 20px;
 }
 
+#github-badge {
+  width: 300px;
+}
+
+
 footer {
-  display:table-row; 
   text-align: center;
   margin-bottom: 5px;
 }
