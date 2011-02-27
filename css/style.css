@@ -1,3 +1,7 @@
+header, footer, aside, nav, article {
+	display: block;
+}
+
 body {
   background-image:url('images/google_grid.png');
   height:100%;
@@ -25,26 +29,26 @@ h1 {
 
 h2 {
   font-size: 22px;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #root {
-  
   padding-left: 50px;
   padding-right: 50px;
- }
 
-header, footer, aside, nav, article {
-	display: block;
+	position:relative;
+	
+	height:auto !important;
+	height:100%;
+
+	min-height:100%;
 }
 
 #body-section {
-  display: table;  
 }
 
 #copy {
-   display:table-row; 
    font-size: 26px;
    font-style: normal;
    font-weight: 400;
@@ -61,25 +65,28 @@ header, footer, aside, nav, article {
 }
 
 #articles {
-  display: table-cell;
 }
 
 #article ul li:before {
 	content: "\00BB \0020";
 }
 
-aside {
-  display: table-cell;
-  width: 320px;
-  padding-left: 20px;
+#github-bit {
+  padding-top: 30px;
 }
 
 #github-badge {
   width: 300px;
 }
 
-
 footer {
   text-align: center;
   margin-bottom: 5px;
 }
+
+.stickey-footer { 
+	position:absolute;
+	width:100%;
+	bottom:0; /* stick to bottom */
+}
+
