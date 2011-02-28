@@ -67,16 +67,12 @@ h2 {
 #articles {
 }
 
-#article ul li:before {
+ul li:before {
 	content: "\00BB \0020";
 }
 
-#github-bit {
-  padding-top: 30px;
-}
-
-#github-badge {
-  width: 300px;
+#github-projects a {
+  text-transform:capitalize;
 }
 
 footer {

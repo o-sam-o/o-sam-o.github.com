@@ -1,5 +1,6 @@
 <html>
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <link  href="http://fonts.googleapis.com/css?family=Rock+Salt:regular" rel="stylesheet" type="text/css" >
   <link  href="http://fonts.googleapis.com/css?family=Schoolbell:regular" rel="stylesheet" type="text/css" >
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -31,17 +32,26 @@
       </article>
 
       <article id="github-bit">
-        <div id="github-badge"></div>
-        <script type="text/javascript" charset="utf-8">
-          GITHUB_USERNAME = 'o-sam-o';
-          GITHUB_LIST_LENGTH = 30;
-          GITHUB_HEAD = 'div';
-          GITHUB_THEME = 'white';
-          GITHUB_TITLE = 'Github Projects';
-          GITHUB_SHOW_ALL = 'Show all';
+        <header>
+          <h2>Github Projects</h2>
+        </header>
+        <ul id="github-projects"></ul>
+        <script>
+          $(document).ready(function() {
+            $.ajax({
+              url: 'http://github.com/api/v1/json/o-sam-o',
+              dataType: 'jsonp',
+              success: function(data) {
+
+                $.each(data.user.repositories, function(index, repository) {
+                  $('#github-projects').prepend('<li><a href="' + repository.url + '">' + repository.name + '</a> - ' + repository.description + '</li>');
+                });
+              }
+            });
+          });
         </script>
-        <script src="http://drnic.github.com/github-badges/dist/github-badge-launcher.js" type="text/javascript"></script>
       </article>
+
 
      </section>
 
