@@ -2,6 +2,10 @@ header, footer, aside, nav, article {
 	display: block;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   height:100%;
   font-family: 'Schoolbell', serif;
