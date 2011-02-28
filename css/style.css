@@ -5,6 +5,7 @@ header, footer, aside, nav, article {
 body {
   height:100%;
   font-family: 'Schoolbell', serif;
+  color: #1B1112;
 }
 
 h1, h2 {
@@ -21,7 +22,7 @@ h1, h2 {
 
 h1 {
   font-size: 52px;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
 }
@@ -32,11 +33,16 @@ h2 {
   padding-bottom: 20px;
 }
 
+hr {
+  margin: 0;
+  color: #A4E666;
+  background-color: #A4E666;
+  height: 5px;
+  border-bottom: 1px solid black;
+}
+
 #root {
   background-image:url('images/google_grid.png');
-
-  padding-left: 50px;
-  padding-right: 50px;
 
 	position:relative;
 	
@@ -47,6 +53,8 @@ h2 {
 }
 
 #body-section {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 #copy {
@@ -77,7 +85,7 @@ ul li:before {
 }
 
 #links {
-  height: 140px;
+  height: 160px;
 }
 
 #flickr-link, #linkedin-link, #forrst-link, #github-link, #stackoverflow-link, #email-link {
@@ -131,8 +139,16 @@ ul li:before {
 
 
 footer {
-  text-align: center;
-  margin-bottom: 5px;
+  border-top: 3px solid black;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background: #616536;
+  height: 40px;
+}
+
+#html5logo {
+  margin: 5px 10px 5px 0px;
+  float: right;
 }
 
 .stickey-footer { 
