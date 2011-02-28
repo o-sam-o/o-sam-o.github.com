@@ -5,7 +5,7 @@ header, footer, aside, nav, article {
 body {
   height:100%;
   font-family: 'Schoolbell', serif;
-  color: #1B1112;
+  color: #202020;
 }
 
 h1, h2 {
@@ -35,8 +35,8 @@ h2 {
 
 hr {
   margin: 0;
-  color: #A4E666;
-  background-color: #A4E666;
+  color: #F56712;
+  background-color: #F56712;
   height: 5px;
   border-bottom: 1px solid black;
 }
@@ -71,9 +71,6 @@ hr {
 
 #copy p {
   padding-bottom: 15px;
-}
-
-#articles {
 }
 
 ul li:before {
@@ -142,7 +139,7 @@ footer {
   border-top: 3px solid black;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: #616536;
+  background: #326474;
   height: 40px;
 }
 
@@ -154,6 +151,6 @@ footer {
 .stickey-footer { 
 	position:absolute;
 	width:100%;
-	bottom:0; /* stick to bottom */
+	bottom:0;
 }
 

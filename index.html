@@ -1,19 +1,36 @@
 <html>
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <link  href="http://fonts.googleapis.com/css?family=Rock+Salt:regular" rel="stylesheet" type="text/css" >
-  <link  href="http://fonts.googleapis.com/css?family=Schoolbell:regular" rel="stylesheet" type="text/css" >
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <link  href="http://fonts.googleapis.com/css?family=Rock+Salt:regular" rel="stylesheet" type="text/css" >
+    <link  href="http://fonts.googleapis.com/css?family=Schoolbell:regular" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-  <!-- Link icons source:
+    <!-- Link icons source:
     http://webexpedition18.com/work/extreme-grunge-social-media-garments-icons-pack/
     http://www.komodomedia.com/blog/2009/06/social-network-icon-pack/
     http://yamayo.to/wp/
     http://anofsinger.com/Default.aspx
-  -->
+    -->
 
-  <head>
     <title>Sam Cavenagh</title>
+
+    <script>
+      // Dynamically populate Github section
+      $(document).ready(function() {
+        $.ajax({
+          url: 'http://github.com/api/v1/json/o-sam-o',
+          dataType: 'jsonp',
+          success: function(data) {
+
+            $.each(data.user.repositories, function(index, repository) {
+              $('#github-projects').prepend('<li><a href="' + repository.url + '">' + repository.name + '</a> - ' + repository.description + '</li>');
+            });
+          }
+        });
+      });
+    </script>
+
   </head>
 
   <section id="root">
@@ -26,8 +43,8 @@
     <section id="body-section">
 
       <article id="copy">
-        <p>I'm a Software Engineer, currently living in Sydney, Australia.  I earned my strips cutting Java code but have branched out into Javascript, Python and most recently working full-time using Ruby.</p>
-        <p>This page is a simple place holder, which likes to other things of mine around the net.</p>
+        <p>I'm a Software Engineer, currently living in Sydney, Australia.  I earned my stripes cutting Java code but have branched out into Javascript, Python and most recently working full-time with Ruby.</p>
+        <p>This page is a simple place holder, which links to other things of mine around the net.</p>
       </article>
 
       <article id="articles">
@@ -44,20 +61,6 @@
           <h2>Github Projects</h2>
         </header>
         <ul id="github-projects"></ul>
-        <script>
-          $(document).ready(function() {
-            $.ajax({
-              url: 'http://github.com/api/v1/json/o-sam-o',
-              dataType: 'jsonp',
-              success: function(data) {
-
-                $.each(data.user.repositories, function(index, repository) {
-                  $('#github-projects').prepend('<li><a href="' + repository.url + '">' + repository.name + '</a> - ' + repository.description + '</li>');
-                });
-              }
-            });
-          });
-        </script>
       </article>
 
       <article id="links">
