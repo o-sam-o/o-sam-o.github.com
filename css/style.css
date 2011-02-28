@@ -3,7 +3,6 @@ header, footer, aside, nav, article {
 }
 
 body {
-  background-image:url('images/google_grid.png');
   height:100%;
   font-family: 'Schoolbell', serif;
 }
@@ -34,6 +33,8 @@ h2 {
 }
 
 #root {
+  background-image:url('images/google_grid.png');
+
   padding-left: 50px;
   padding-right: 50px;
 
@@ -74,6 +75,60 @@ ul li:before {
 #github-projects a {
   text-transform:capitalize;
 }
+
+#links {
+  height: 140px;
+}
+
+#flickr-link, #linkedin-link, #forrst-link, #github-link, #stackoverflow-link, #email-link {
+  float: left;
+  margin-right: 5px;
+  font-size: 0;
+}
+
+#flickr-link {
+  background-image:url('images/flickr_35x83.png');
+  display: block;
+  height: 35px;
+  width: 83px;
+}
+
+#linkedin-link {
+  background-image:url('images/linkedin_35x83.png');
+  display: block;
+  height: 35px;
+  width: 83px;
+}
+
+#forrst-link {
+  background-image:url('images/forrst_32.png');
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+#github-link {
+  background-image:url('images/github_32.png');
+  display: block;
+  height: 32px;
+  width: 33px;
+}
+
+#stackoverflow-link {
+  background-image:url('images/stackoverflow_30.png');
+  background-size: 100%;
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+#email-link {
+  background-image:url('images/email_32.png');
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
 
 footer {
   text-align: center;
