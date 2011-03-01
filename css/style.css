@@ -138,13 +138,17 @@ ul li:before {
   width: 32px;
 }
 
+#contact-links {
+  padding-left: 10px;
+  padding-top: 5px;
+}
 
 footer {
   border-top: 3px solid black;
   padding-bottom: 5px;
   padding-top: 5px;
-  background: #326474;
-  height: 40px;
+  background: #F56712;
+  height: 45px;
 }
 
 #html5logo {
