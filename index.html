@@ -24,12 +24,11 @@
       // Dynamically populate Github section
       $(document).ready(function() {
         $.ajax({
-          url: 'http://github.com/api/v1/json/o-sam-o',
+          url: 'https://api.github.com/users/o-sam-o/repos',
           dataType: 'jsonp',
           success: function(data) {
-
-            $.each(data.user.repositories, function(index, repository) {
-              $('#github-projects').prepend('<li><a href="' + repository.url + '">' + repository.name + '</a> - ' + repository.description + '</li>');
+            $.each(data.data, function(index, repository) {
+              $('#github-projects').prepend('<li><a href="' + repository.html_url + '">' + repository.name + '</a> - ' + repository.description + '</li>');
             });
           }
         });
